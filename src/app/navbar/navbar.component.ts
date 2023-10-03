@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  openNavContent(option:string)
+  {
+    console.log(option)
+  }
+
+  navigateTo(path:any)
+  {
+    
+  }
 }

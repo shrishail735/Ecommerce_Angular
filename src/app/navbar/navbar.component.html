@@ -1,24 +1,47 @@
-<div class="fixed top-0 left-0 right-0 text-gray-800 z-50 bg-[#5C8374]">
+<div class="fixed top-0 left-0 right-0 text-gray-800 z-50 bg-[#5C8374] px-5 lg:px-20">
 
     <div class="h-16 flex justify-between items-center">
 
         <div class="flex items-center ">
-             <div class="mr-5">
-            <img class="w-16 ml-5 rounded-lg" src="https://s.tmimgcdn.com/scr/400x250/267900/shopping-vector-logo-design-template-v8_267941-original.jpg" alt="">
-             </div>
+            <div class="mr-5">
+                <img class="w-16 ml-5 rounded-lg"
+                    src="https://s.tmimgcdn.com/scr/400x250/267900/shopping-vector-logo-design-template-v8_267941-original.jpg"
+                    alt="">
+            </div>
 
-        <div>
-            <div class="flex space-x-4">
-                <a routerLink="/" >Shop</a>
-                <div>
-                    <button mat-raised-button color="accent">Men</button>
-                </div>
-                <div>
-                    <button mat-raised-button>Women</button>
+            <div>
+                <div class="flex space-x-4 items-center">
+                    <a routerLink="/">Shop</a>
+                    <div>
+                        <button (click)="openNavContent('men')" mat-raised-button color="accent">Men</button>
+                    </div>
+                    <div>
+                        <button (click)="openNavContent('women')" mat-raised-button color="primary">Women</button>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="flex items-center space-x-4">
+           <button mat-icon-button (click)="navigateTo('cart')">
+            <mat-icon>shopping_cart</mat-icon>
+           </button>
+           <button *ngIf="false" mat-raised-button>LOGIN</button>
+
+           <div *ngIf="true" class="flex items-center">
+            <div class="flex items-center">
+                <span class="font-bold text-lg">Shri</span>
+
+                <button mat-button class="ml-2" [matMenuTriggerFor]="profileMenu">
+                    <img class="h-7 w-7" src="https://cdn.pixabay.com/photo/2014/03/25/16/32/user-297330_640.png" alt="">
+                </button>
+                <mat-menu #profileMenu="matMenu">
+                    <button mat-menu-item>Orders</button>
+                    <button mat-menu-item>Profile</button>
+                    <button mat-menu-item>Logout</button>
+                  </mat-menu>
+            </div>
+           </div>
         </div>
-       
     </div>
 </div>
