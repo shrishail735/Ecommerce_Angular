@@ -13,10 +13,10 @@
                 <div class="flex space-x-4 items-center">
                     <a routerLink="/">Shop</a>
                     <div>
-                        <button (click)="openNavContent('men')" mat-raised-button color="accent">Men</button>
+                        <button (click)="openNavContent('men',1,$event)" mat-raised-button color="accent">Men</button>
                     </div>
                     <div>
-                        <button (click)="openNavContent('women')" mat-raised-button color="primary">Women</button>
+                        <button (click)="openNavContent('women',1,$event)" mat-raised-button color="primary">Women</button>
                     </div>
                 </div>
             </div>
@@ -44,4 +44,9 @@
            </div>
         </div>
     </div>
+    <div *ngIf="isNavOpen" (click)="$event.stopPropagation()" class="modal-container">
+
+        <app-navbar-content [selectedSection]="currentSection"></app-navbar-content>
+    </div>
 </div>
+

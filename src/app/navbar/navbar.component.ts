@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,13 +7,31 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
-  openNavContent(option:string)
+  currentSection:any;
+  isNavOpen:any;
+  openNavContent(option:string,id:any,event:any)
   {
-    console.log(option)
+    if(id==1)
+    {
+      this.currentSection=option;
+      this.isNavOpen=true;
+      event.stopPropagation();
+    }
+    else{
+      this.isNavOpen=false;
+    }
   }
 
   navigateTo(path:any)
   {
-    
+
   }
+
+  @HostListener('document:click',['$event'])
+  onDocumentClick(event:MouseEvent)
+  {
+    this.openNavContent("",2,event);
+    event.stopPropagation()  
+  }
+
 }
