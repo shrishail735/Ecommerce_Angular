@@ -1,13 +1,13 @@
-<div class="w-full bg-opacity-25">
+<div class="w-full">
     <div class="w-full flex bg-gray-950 h-1/2 text-white shadow-lg p-6">
-        <div class="flex justify-around">
-            <div class="flex flex-col ml-5" *ngFor= "let item of category[selectedSection].sections">
+        <div class="flex justify-around w-full">
+            <div class="flex flex-col" *ngFor= "let item of category[selectedSection].sections">
                 <h1 class="text-center">{{item.name}}</h1>
                 <button mat-button *ngFor="let menu of item.items">{{menu.name}}</button>
             </div>
             <div class="hidden lg:block" *ngFor="let feature of category[selectedSection].featured">
                 <div class="ml-5" >
-                    <img class="w-[25rem] h-[20rem] object-cover object-top" [src]="feature.imageSrc" alt="">
+                    <img class="w-[19rem] h-[20rem] object-cover object-top" [src]="feature.imageSrc" alt="">
                     <p class="text-gray-600">{{feature.name}}</p>
                 </div>
             </div>
