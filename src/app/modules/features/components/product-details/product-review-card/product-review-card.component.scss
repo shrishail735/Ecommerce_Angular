@@ -1,0 +1,10 @@
+.container
+{
+    box-shadow: black 10px 5px 15px 5px;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+.container:hover
+{
+    transform: translateX(5px);
+}

@@ -14,7 +14,7 @@ export class ProductsComponent {
   singleFilterData:any
   womenTops:any
 
-  constructor(private Router:Router ,private ActivatedRoutes:ActivatedRoute)
+  constructor(private router:Router ,private ActivatedRoutes:ActivatedRoute)
   {
 
   }
@@ -23,6 +23,7 @@ export class ProductsComponent {
     this.filterData = filters;
     this.singleFilterData = singleFilters
     this.womenTops = womenTops
+    console.log(this.router.url)
   }
 
   handleMultiselectFilter(value:string, sectionId:string)
@@ -53,13 +54,13 @@ export class ProductsComponent {
      }
 
      console.log(queryParams,filterValue)
-     this.Router.navigate([],{queryParams})
+     this.router.navigate([],{queryParams})
   }
 
   handleSingleselectFilter(value:string, sectionId:string)
   {
     const queryParams = {...this.ActivatedRoutes.snapshot.queryParams};
     queryParams[sectionId] =value;
-    this.Router.navigate([],{queryParams})
+    this.router.navigate([],{queryParams})
   }
 }

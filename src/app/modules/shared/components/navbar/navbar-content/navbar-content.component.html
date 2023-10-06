@@ -3,7 +3,7 @@
         <div class="flex justify-around w-full">
             <div class="flex flex-col" *ngFor= "let item of category[selectedSection].sections">
                 <h1 class="text-center">{{item.name}}</h1>
-                <button mat-button *ngFor="let menu of item.items">{{menu.name}}</button>
+                <button mat-button (click)="navigateTo(menu.href)" *ngFor="let menu of item.items">{{menu.name}}</button>
             </div>
             <div class="hidden lg:block" *ngFor="let feature of category[selectedSection].featured">
                 <div class="ml-5" >

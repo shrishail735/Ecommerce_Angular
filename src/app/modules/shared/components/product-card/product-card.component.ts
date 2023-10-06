@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-products-card',
@@ -7,6 +8,11 @@ import { Component, Input } from '@angular/core';
 })
 export class ProductCardComponent {
    @Input() product:any
-
- 
+   @Input() index:any
+   constructor(private router:Router)
+   {}
+   navigate()
+   {
+    this.router.navigate(['product-details',this.index])
+   }
 }

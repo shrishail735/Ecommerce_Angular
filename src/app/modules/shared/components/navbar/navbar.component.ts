@@ -31,7 +31,7 @@ export class NavbarComponent {
   onDocumentClick(event:MouseEvent)
   {
     this.openNavContent("",2,event);
-    event.stopPropagation()  
+    // event.stopPropagation()  
   }
 
 }

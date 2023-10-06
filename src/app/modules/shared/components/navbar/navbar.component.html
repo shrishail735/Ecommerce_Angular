@@ -44,7 +44,7 @@
            </div>
         </div>
     </div>
-    <div *ngIf="isNavOpen" (click)="$event.stopPropagation()" class="absolute w-full modal-container">
+    <div *ngIf="isNavOpen"  class="absolute w-full modal-container">
 
         <app-navbar-content [selectedSection]="currentSection"></app-navbar-content>
     </div>

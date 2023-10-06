@@ -78,8 +78,8 @@
                
                 <div class="lg:col-span-3">
                     <div class="flex flex-wrap justify-evenly">
-                        <ng-container *ngFor="let item of womenTops">
-                            <app-products-card [product]="item"/>
+                        <ng-container *ngFor="let item of womenTops;index as i">
+                            <app-products-card [product]="item" [index]="i"/>
                         </ng-container>
                     </div>
                 </div>
