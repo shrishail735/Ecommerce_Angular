@@ -1,1 +1,48 @@
-<p>cart works!</p>
+<main class="mt-10">
+    <div class="py-10 lg:grid grid-cols-3 lg:px-16">
+
+        <section class="lg:col-span-2 lg:px-5">
+            <div class="box space-y-3">
+                <ng-container *ngIf="cart">
+                    <div *ngFor="let product of cart;let last=last">
+                        <app-cart-item/>
+                        <mat-divider *ngIf="!last"/>
+                    </div>
+                </ng-container>
+            </div>
+            
+        </section>
+
+        <section class="sticky p-5 h-[100vh] top-0 mt-5 lg:mt-0 " >
+            <ng-container *ngIf="cart">
+                <div class="box p-5 rounded-md">
+                    <p class="font-bold text-gray-300 pb-5">PRICE DETAILS</p>
+                    <mat-divider></mat-divider>
+                    <div class="space-y-3">
+                        <div class="flex justify-between pt-3">
+                            <span>Total Price</span>
+                            <span>$6763</span>
+                        </div>
+                        <div class="flex justify-between pt-3">
+                            <span>Discount Price</span>
+                            <span class="text-red-300">-$2763</span>
+                        </div>
+                        <div class="flex justify-between pt-3">
+                            <span>Delivery charges</span>
+                            <span>Free</span>
+                        </div>
+                        <div class="flex justify-between  font-semibold text-lg">
+                            <span>Total Amount</span>
+                            <span class="text-green-400">$4000</span>
+                        </div>
+                    </div>
+                 
+                    <button (click)="navigateToCheckout()" mat-raised-button class="mt-8 p-25 px-10 w-full text-lg" color="accent">CHECKOUT</button>
+                 
+                </div>
+                
+            </ng-container>
+            
+        </section>
+    </div>
+</main>

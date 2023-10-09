@@ -1,0 +1,38 @@
+<div class="p-5 shadow-lg">
+    <div class="flex items-center">
+        <div class="w-[6rem] h-[6rem] lg:w-[9rem] lg:h-[9rem]">
+    
+            <img class="w-full h-full object-cover object-top" src="https://rukminim1.flixcart.com/image/612/612/kflftzk0/top/q/t/m/l-aw-2081w-aelomart-original-imafwyzhw8t2npsk.jpeg?q=70" alt="">
+        </div>
+        <div class="ml-5 space-y-1">
+            <p class="font-semibold text-lg">Item-name</p>
+            <p class="text-gray-500">size and color</p>
+            <p class="text-gray-400 mt-2">seller</p>
+    
+            <div class="flex items-center space-x-3">
+                <p class="text-gray-500 line-through">$2999</p>
+                <p class="font-semibold">$299</p>
+                <p class="text-green-400 font-semibold">82% off</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="flex justify-between lg:space-x-10">
+<div class=" flex items-center space-x-3 mb-2">
+    <div class="example-button-container">
+        <button mat-mini-fab (click)="updateCart(-1)" [disabled]="true">
+            <mat-icon>remove</mat-icon>
+        </button>
+    </div>
+    <span class="py-1 border border-gray-400 px-7 rounded-md">1</span>
+    <div class="example-button-container">
+        <button mat-mini-fab (click)="updateCart(1)" [disabled]="false">
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
+</div>
+
+<div>
+    <button (click)="removeCartItem()" mat-stroked-button color="accent">Remove</button>
+</div>
+</div>

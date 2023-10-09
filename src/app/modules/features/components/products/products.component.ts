@@ -28,7 +28,7 @@ export class ProductsComponent {
 
   handleMultiselectFilter(value:string, sectionId:string)
   {
-    console.log(value)
+    // console.log(value)
     const queryParams = {...this.ActivatedRoutes.snapshot.queryParams};
      const filterValue = queryParams[sectionId]?queryParams[sectionId].split(','):[];
 
