@@ -1,0 +1,73 @@
+<div class="grid grid-cols-1 lg:grid-cols-12 px-4 lg:px-20 gap-4">
+    <div class="col-span-1 lg:col-span-5 ">
+        <div class="shadow-md rounded-md h-[30rem] overflow-y-scroll hideScrollbar box py-5">
+
+            <div class="cursor-pointer">
+
+                <div *ngFor="let address of addresses" class="space-y-2 py-2">
+                    <app-address-card [address]="address"/>
+                    <button mat-raised-button color="accent" (click)="handleCreateOrder(address)">Deliver here</button>
+                    <mat-divider></mat-divider>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-span-1 lg:col-span-7 ">
+        <div class="py-5 box rounded-md">
+
+            <form [formGroup]="myForm" (ngSubmit)="handleSubmit()">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div class="col-span-1">
+                        <mat-form-field  appearance="fill" class="w-full">
+                            <mat-label>First Name</mat-label>
+                            <input matInput formControlName="firstName" placeholder="FirstName" type="text">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-span-1">
+                        <mat-form-field  appearance="fill" class="w-full">
+                            <mat-label>Last Name</mat-label>
+                            <input matInput formControlName="lastName" placeholder="LastName" type="text">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-span-2">
+                        <mat-form-field  appearance="fill" class="w-full">
+                            <mat-label>Address</mat-label>
+                            <textarea matInput formControlName="streetAddress" placeholder="Address" type="text" rows="4" ></textarea>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-span-1">
+                        <mat-form-field  appearance="fill" class="w-full">
+                            <mat-label>City</mat-label>
+                            <input matInput formControlName="city" placeholder="City" type="text">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-span-1">
+                        <mat-form-field  appearance="fill" class="w-full">
+                            <mat-label>State</mat-label>
+                            <input matInput formControlName="state" placeholder="State" type="text">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-span-1">
+                        <mat-form-field  appearance="fill" class="w-full">
+                            <mat-label>ZipCode</mat-label>
+                            <input matInput formControlName="zipCode" placeholder="ZipCode" type="text">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-span-1">
+                        <mat-form-field  appearance="fill" class="w-full">
+                            <mat-label>Phone Number</mat-label>
+                            <input matInput formControlName="phoneNumber" placeholder="Phone Number" type="text">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-span-2">
+
+                           <button class="w-full" color="accent" mat-raised-button>Deliver Here</button>
+                      
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

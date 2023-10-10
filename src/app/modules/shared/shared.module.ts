@@ -9,6 +9,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { StarRatingComponent } from './components/star-rating/star-rating.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
+import { AddressCardComponent } from './components/address-card/address-card.component';
 
 
 
@@ -19,7 +20,8 @@ import { CartItemComponent } from './components/cart-item/cart-item.component';
     FooterComponent,
     ProductCardComponent,
     StarRatingComponent,
-    CartItemComponent
+    CartItemComponent,
+    AddressCardComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +36,8 @@ import { CartItemComponent } from './components/cart-item/cart-item.component';
     ProductCardComponent,
     FooterComponent,
     StarRatingComponent,
-    CartItemComponent
+    CartItemComponent,
+    AddressCardComponent
   ]
 })
 export class SharedModule { }

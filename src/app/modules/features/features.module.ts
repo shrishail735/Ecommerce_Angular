@@ -20,9 +20,12 @@ import { PaymentComponent } from './components/payment/payment.component';
 import { OrderComponent } from './components/order/order.component';
 import { OrderDetailsComponent } from './components/order-details/order-details.component';
 import { PaymentSuccessComponent } from './components/payment-success/payment-success.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductReviewCardComponent } from './components/product-details/product-review-card/product-review-card.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { AddressFormComponent } from './components/checkout/address-form/address-form.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     OrderDetailsComponent,
     PaymentSuccessComponent,
     ProductReviewCardComponent,
+    AddressFormComponent,
 
   ],
   imports: [
@@ -52,7 +56,10 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatRadioModule,
     SharedModule,
     FormsModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   exports:[
     HomeComponent,
