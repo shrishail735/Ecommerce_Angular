@@ -1,1 +1,20 @@
-<p>order-details works!</p>
+<div class="py-10 px-5 lg:px-20">
+    <div class="">
+        <h1 class="text-center ">Order Status</h1>
+    </div>
+    <div class="py-5">
+        <app-order-tracker [steps]="steps" activeStep="1"/>
+    </div>
+    <div class="space-y-10 pt-5">
+        <div class="box ">
+            <h1 class="text-lg py-2">Shipping address</h1>
+            <app-address-card/>
+        </div>
+        
+       <div class="space-y-6 mt-10">
+        <div *ngFor="let order of orders">
+            <app-order-card/>
+        </div>
+       </div>
+    </div>
+</div>

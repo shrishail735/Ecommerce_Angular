@@ -26,6 +26,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { AddressFormComponent } from './components/checkout/address-form/address-form.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { OrderCardComponent } from './components/order/order-card/order-card.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import {MatInputModule} from '@angular/material/input';
     PaymentSuccessComponent,
     ProductReviewCardComponent,
     AddressFormComponent,
+    OrderCardComponent,
 
   ],
   imports: [

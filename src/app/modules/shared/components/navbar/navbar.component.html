@@ -36,7 +36,7 @@
                     <img class="h-7 w-7" src="https://cdn.pixabay.com/photo/2014/03/25/16/32/user-297330_640.png" alt="">
                 </button>
                 <mat-menu #profileMenu="matMenu">
-                    <button mat-menu-item>Orders</button>
+                    <button (click)="navigateTo('account/orders')" mat-menu-item>Orders</button>
                     <button mat-menu-item>Profile</button>
                     <button mat-menu-item>Logout</button>
                   </mat-menu>

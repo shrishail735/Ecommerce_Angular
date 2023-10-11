@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,6 +10,8 @@ export class NavbarComponent {
 
   currentSection:any;
   isNavOpen:any;
+
+  constructor(private router:Router){}
   openNavContent(option:string,id:any,event:any)
   {
     if(id==1)
@@ -24,7 +27,7 @@ export class NavbarComponent {
 
   navigateTo(path:any)
   {
-
+    this.router.navigate([path])
   }
 
   @HostListener('document:click',['$event'])
