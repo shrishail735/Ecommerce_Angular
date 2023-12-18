@@ -3,6 +3,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "EcommerceApplication",
+      "request": "launch",
+      "mainClass": "com.ecommerce.ecommerce.EcommerceApplication",
+      "projectName": "ecommerce"
+    },
+    {
       "name": "ng serve",
       "type": "chrome",
       "request": "launch",
